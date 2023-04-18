@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {box-sizing: border-box}
+
+        form {
+            margin: 0 auto; 
+            width:650px;
+            border-color:#04AA6D
+            border-width 2px 2px 2px;
+            border-style :solid;
+            } 
+/* Add padding to containers */
+.container {
+    padding: 17px;
+  }
+
+/* Full-width input fields */
+input[type=text], input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+/* Set a style for the submit/register button */
+.submitbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  
+  }
+  
+  .submitbtn:hover {
+    opacity:1;
+  }
+  
+  
+  
+  .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    
+     
+        </style>
+    <script>
+        function clicked() {
+            alert("Form Submitted Successfully");
+          }
+    </script>
+        
+    </head>
+<style>
+       #content img {
+position: absolute;
+top:0px;
+right: 0px;
+float: right;
+       }
+
+#left {
+position: absolute;
+top:0px
+left: 0px;
+float: left
+
+
+
+
+
+}
+
+
+
+
+
+
+       
+
+
+
+
+
+</style>
+
+
+
+
+
+
+<body>
+    <body style="background-color: rgb(235, 221, 215);">
+
+    
+    
+
+        <form style="background-color:#ecb54f; background: opacity 10px;" >
+            <div class="container">
+              <h1><center>Nutan College Of Engineering And Research</center></h1>
+              <!-- <p>Please fill in this form to create an account.</p> -->
+              <hr>
+              
+           <label for="name"><b>Name</b></label>
+              <input style="background-color:#8febc5"  type="text" placeholder="Enter Name" name="name" id="name" required>
+            
+              <label for="contact"><b>Contact</b></label>
+              <input style="background-color:#8febc5" type="tel" placeholder="Enter Contact Number" name="phone" pattern="[0-9]{10}" id="phone" required>
+              
+              <!-- <br>
+              <label for="phone"><b>Enter a phone number:</b></label><br><br>
+              <input type="tel" placeholder="Enter Contact Number" id="phone" name="phone" pattern="[0-9]{10}" required><br> -->
+          
+              <label for="email"><b>Email</b></label>
+              <input style="background-color:#8febc5"  type="text" placeholder="Enter Email" name="email" id="email" required>
+    
+              <label for="gender"><b>Gender</b></label> 
+              
+              <input type="radio" id="male" name="fav_language">
+              
+              
+              <label for="html">Male</label>
+              <input type="radio" id="female" name="fav_language">
+              <label for="css">Female</label><br>
+    
+            <br>
+    
+            <label for="cars"><b>Choose a course:</b></label>
+    
+            <select id="course">
+             <option disabled selected value> -- Select a Course -- </option>
+             <option value="cse">Computer Science & Engineering</option>
+             <option value="ai">Computer Science & Artificial Engineering</option>
+             <option value="ece">Electronics & Telecommunication</option>
+            <option value="mech">Mechanical</option>
+            </select>
+            
+              <hr>
+        
+        
+              <button type="submit" class="submitbtn" onclick="clicked();" value="send">Submit</button>
+            </div>
+          
+           
+          </form>
+        
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

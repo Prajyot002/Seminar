@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+    
+        * {box-sizing: border-box}
+
+        form { 
+            margin: 0 auto; 
+            width:650px;
+            border-color:#04AA6D
+            
+            
+            }
+
+           
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  border: 4px;
+  border-color: rgb(238, 194, 129);
+  border-radius: 10px;
+
+}
+
+
+h1{
+  text-align: center;
+  font-family: Courier;
+  color: aquamarine;
+
+}
+
+h2{
+  text-align: center;
+  font-family: Verdana;
+  color: rgb(0, 0, 0);
+ 
+
+}
+/* Full-width input fields */
+input[type=text], input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 2px;
+}
+
+/* Set a style for the submit/register button */
+.submitbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.7;
+  transition-duration: 0.2s;
+
+}
+
+.submitbtn:hover {
+  opacity:1;
+}
+
+.submitbtn:active{
+  transform: scale(0.98);
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  table{
+    border: 1px solid #123456;
+    width: 600px;
+  }
+ 
+    </style>
+<script>
+    function clicked() {
+        alert("Form Submitted Successfully");
+      }
+</script>
+    
+</head>
+<body background="back.jpg">
+
+  <h1>Nutan College Of Engineering & Research, Talegaon</h1>
+
+    <form style="background-color:#bb9a5c; background: opacity 10px;" >
+        <div class="container">
+          <h2>Registration form for Student</h2>
+          <!-- <p>Please fill in this form to create an account.</p> -->
+          <hr>
+        <table>
+          <tr>
+       <th><label for="name"><b>Name</b></label></td>
+         <td> <input type="text" placeholder="Enter Name" name="name" id="name" required></td>
+        </tr>
+         <tr>
+          <th><label for="contact"><b>Contact</b></label></td> 
+          <td><input type="tel" placeholder="Enter Contact Number" name="phone" pattern="[0-9]{10}" id="phone" required></td>
+        </tr>
+        <tr>
+          <th><label for="email"><b>Email</b></label></td>
+          <td><input type="text" placeholder="Enter Email" name="email" id="email" required></td>
+        </tr>
+        <tr>
+         <th> <label for="gender"><b>Gender</b></label> </td>
+          <td><input type="radio" id="male" name="fav_language">
+        
+          
+          <label for="html">Male</label>
+          <input type="radio" id="female" name="fav_language">
+          <label for="css">Female</label><br>
+      </tr> 
+        <br>
+      <tr>
+        <th><label for="cars"><b>Choose a course:</b></label></td>
+
+        <td><select id="course">
+         <option disabled selected value> -- Select a Course -- </option>
+         <option value="cse">Computer Science & Engineering</option>
+         <option value="ai">Computer Science & Artificial Engineering</option>
+         <option value="ece">Electronics & Telecommunication</option>
+        <option value="mech">Mechanical</option>
+        </select>
+      </td>
+      </tr>
+      </table>  
+          <hr>
+    
+    
+          <button type="submit" class="submitbtn" onclick="clicked();" value="send">Submit</button>
+        </div>
+      
+       
+      </form>
+    
+</body>
+</html>
