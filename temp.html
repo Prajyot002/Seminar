@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Registration Form</title>
+  <style>
+    form {
+        max-width: 64em;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+      }
+  </style>
+  <script>
+    function validateForm() {
+      var name = document.forms["employeeForm"]["name"].value;
+      var mobile = document.forms["employeeForm"]["mobile"].value;
+      var address = document.forms["employeeForm"]["address"].value;
+      var email = document.forms["employeeForm"]["email"].value;
+      var salary = document.forms["employeeForm"]["salary"].value;
+
+      if (name == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+
+      if (mobile == "") {
+        alert("Mobile number must be filled out");
+        return false;
+      }
+
+      if (address == "") {
+        alert("Address must be filled out");
+        return false;
+      }
+
+      if (email == "") {
+        alert("Email must be filled out");
+        return false;
+      }
+
+      if (salary == "") {
+        alert("Salary must be filled out");
+        return false;
+      }
+
+      var mobileRegex = /^[1-9]\d{9}$/;
+      if (!mobileRegex.test(mobile)) {
+        alert("Invalid mobile number");
+        return false;
+      }
+
+      var emailRegex = /^\S+@\S+\.\S+$/;
+      if (!emailRegex.test(email)) {
+        alert("Invalid email address");
+        return false;
+      }
+
+      var salaryRegex = /^\d+$/;
+      if (!salaryRegex.test(salary)) {
+        alert("Invalid salary");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Employee Registration Form</h2>
+  <form name="employeeForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" name="mobile"><br><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address"></textarea><br><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br><br>
+
+    <label for="salary">Salary:</label>
+    <input type="text" id="salary" name="salary"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
