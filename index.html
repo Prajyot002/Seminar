@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <title>Practical 5</title>
+    <style>
+        body{
+            background-color: rgb(55, 71, 67);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 35px;
+            padding-left: 35px;
+            border-radius: 20px;
+            background-color: rgba(212, 69, 69, 0.63);
+            
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            width: 40%;
+            margin: auto;
+            margin-top: 10%;
+        }
+        input{
+            border-radius: 10px;
+            height: 35px;
+        }
+        button{
+            height: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="string">
+            <h2>Enter a String:</h2>
+            <input type="text" placeholder="Enter String" name="name" id="ogstring">
+            <button onclick="stringlen()">Calculate</button>
+            <h5 id="stringlength"></h5>
+        </div>
+
+        <div class="number">
+            <h2>Enter a number:</h2>
+            <input type="number" placeholder="Enter Number" name="number" id="number">
+            <button onclick="revnum()">Calculate</button>
+            <h5 id="reversenumber"></h5>
+        </div>
+    </div>
+
+
+    <script>
+        function revnum() {
+
+            var ognum = document.getElementById("number").value;
+            var revnumber = ognum.split('').reverse().join('');
+            document.getElementById("reversenumber").innerHTML = "Reverse number is: " + revnumber;
+        }
+        function stringlen() {
+
+            var text = document.getElementById("ogstring").value;
+            var strlen = text.length;
+            document.getElementById("stringlength").innerHTML = "Length of String is: " + strlen;
+        }
+
+    </script>
+</body>
+
+</html>
