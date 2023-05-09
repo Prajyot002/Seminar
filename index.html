@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 35px;
+            padding-left: 35px;
+            border-radius: 20px;
+            background-color: rgba(212, 206, 206, 0.151);
+            backdrop-filter: blur(100px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            width: 50%;
+            margin: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prime">
+                <h2>Enter Starting number:</h2>
+                <input type="number" placeholder="Enter Starting Number" name="number" id="snumber">
+                <h2>Enter Ending number:</h2>
+                <input type="number" placeholder="Enter Ending Number" name="number" id="enumber">
+                <button onclick="primeno()">Calculate</button>
+                <h5 id="primee"></h5>
+
+        </div>
+        
+    </div>
+    <script>
+        function isPrime(number) {
+            if (number <= 1) {
+              return false;
+            }
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+              if (number % i === 0) {
+                return false;
+              }
+            }
+            return true;
+          }
+      
+          function primeno() {
+            const start = parseInt(document.getElementById("snumber").value);
+            const end = parseInt(document.getElementById("enumber").value);
+            let primes = [];
+            for (let i = start; i <= end; i++) {
+              if (isPrime(i)) {
+                primes.push(i);
+              }
+            }
+            
+            document.getElementById("primee").innerHTML = "Prime numbers between " + start + " and " + end + ": " + primes.join(", ");
+          }
+    </script>
+</body>
+</html>
